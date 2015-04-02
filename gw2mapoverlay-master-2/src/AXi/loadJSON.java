@@ -21,7 +21,7 @@ public class loadJSON {
 	private static int redId, greenId, blueId;
 	private static String redName, greenName, blueName;
 
-	public WorldInfo load(String server) throws IOException, JSONException {
+	public static WorldInfo load(String server) throws IOException, JSONException {
 		ourWorld = queryMatchID(server);
 		//ourWorld.printWorld();
 		return ourWorld;
