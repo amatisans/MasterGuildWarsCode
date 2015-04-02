@@ -3,6 +3,7 @@ package AXi;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import javax.swing.border.*;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -110,6 +111,7 @@ public class MainGUI extends JPanel {
 
 		/*************************************************************************************
 		 *************************************************************************************/
+		
 		JLabel whiteSpace = new JLabel("");
 
 		JSlider framesPerSecond = new JSlider(0, TRAN_MIN, TRAN_MAX, TRAN_INIT);
@@ -311,24 +313,80 @@ public class MainGUI extends JPanel {
 		    	int blueBlock = (int) (bluePer * 360);
 		    	int greenBlock = (int) (greenPer * 360);
 		    	int redBlock = (int) (redPer * 360);
+		    	//placement borders
+		    	Color firstBorder = new Color(204,204,0);
+		    	Color secondBorder = new Color(128,128,128);
+		    	Color thirdBorder = new Color(255,128,0);
+		    	//team gets placement border
+		    	Color blueBorder=new Color(0, 0, 0);
+		    	Color greenBorder=new Color(0, 0, 0);
+		    	Color redBorder=new Color(0, 0, 0);
 		    	
+		    	if(bluePer > greenPer && bluePer > redPer){
+		    		blueBorder = firstBorder;//blue 1st
+		    		if(greenPer > redPer){
+		    			greenBorder = secondBorder;//green 2nd
+		    			redBorder = thirdBorder;//red 3rd
+		    		}
+		    		else{
+		    			redBorder = secondBorder;//red 2nd
+		    			greenBorder = thirdBorder;//green 3rd
+		    		}
+		    	}
+		    	else if(greenPer > bluePer && greenPer > redPer){
+		    		greenBorder = firstBorder;//green 1st
+		    		if(bluePer > redPer){
+		    			blueBorder = secondBorder;//blue 2nd
+		    			redBorder = thirdBorder;//red 3rd
+		    		}
+		    		else{
+		    			redBorder = secondBorder;//red 2nd
+		    			blueBorder = thirdBorder;//blue 3rd
+		    		}
+		    	}
+		    	else if(redPer > bluePer && redPer > greenPer){
+		    		redBorder = firstBorder;//red 1st
+		    		if(bluePer > greenPer){
+		    			blueBorder = secondBorder;//blue 2nd
+		    			greenBorder = thirdBorder;//green 3rd
+		    		}
+		    		else{
+		    			greenBorder = secondBorder;//green 2nd
+		    			blueBorder = thirdBorder;//blue 3rd
+		    		}
+		    	}
+		    	//	
 		    	System.out.println(blueBlock);
 		    	System.out.println(greenBlock);
 		    	System.out.println(redBlock);
 		    	
-		    	
+		    	//BLUE TEAM PLACEMENT BORDER
+		    	g.setColor(blueBorder);  
+		     	g.fillRect(3,3,blueBlock + 1,16);
+		     	
+		     	//BLUE TEAM SCORE		    	
 		    	g.setColor(Color.CYAN);  
 		     	g.fillRect(5,5,blueBlock,10);
 		     	g.setColor(Color.BLACK);
 		     	g.setFont(new Font("default", Font.BOLD, 12));
 		     	g.drawString(Integer.toString(ourWorld.blueScore), 5, 15);
 		     	
+		     	//GREEN TEAM PLACEMENT BORDER
+		     	g.setColor(greenBorder);  
+		     	g.fillRect(5 + blueBlock,3,greenBlock,15);
+		     	
+		     	//GREEN TEAM SCORE
 		     	g.setColor(Color.GREEN);  
 		     	g.fillRect(5 + blueBlock,5,greenBlock,10);
 		     	g.setColor(Color.BLACK);
 
 		     	g.drawString(Integer.toString(ourWorld.greenScore), 5 + blueBlock, 15);
 		     	
+		     	//RED TEAM PLACEMENT BORDER
+		     	g.setColor(redBorder);  
+		     	g.fillRect(5 + blueBlock + greenBlock,3,redBlock,15);
+		     	
+		     	//RED TEAM SCORE
 		     	g.setColor(Color.RED);  
 		     	g.fillRect(5 + blueBlock + greenBlock,5,redBlock,10);
 		     	g.setColor(Color.BLACK);
