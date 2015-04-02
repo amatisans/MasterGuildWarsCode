@@ -3,19 +3,15 @@ package AXi;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-
-import org.json.JSONException;
+import javax.swing.border.*;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class MainGUI extends JPanel implements Runnable{
-	private Thread t;
-	
+public class MainGUI extends JPanel {
 	public static final JFrame frame = new JFrame("GuildWars2 Map Overlay");
 
 	public ArrayList<Tabs> tabList = new ArrayList<Tabs>();
@@ -52,10 +48,36 @@ public class MainGUI extends JPanel implements Runnable{
 	
 	private WorldInfo ourWorld;
 
+
+	private ImageIcon greenKeep = createImageIcon("./Icons/Green/Keep.png");
+	private ImageIcon greenSupply = createImageIcon("./Icons/Green/Camp.png");
+	private ImageIcon redGarrison = createImageIcon("./Icons/Red/Castle.png");
+	private ImageIcon redKeep = createImageIcon("./Icons/Red/Keep.png");
+	private ImageIcon redSupply = createImageIcon("./Icons/Red/Camp.png");
+
+
+	/*Node node1 = new Node(greenSupply, "TitanPaw Supply Camp", "Green");
+	Node node2 = new Node(greenSupply, "FaithLeap Supply Camp", "Green");
+	Node node3 = new Node(greenKeep, "Sunnyhill Keep", "Green");
+	Node node4 = new Node(redGarrison, "Garison Garrison", "Red");
+	Node node5 = new Node(greenKeep, "Cragtop Keep", "Green");
+	Node node6 = new Node(greenSupply, "Foghaven Supply Camp", "Green");
+	Node node7 = new Node(redGarrison, "Dreadfall Garison", "Red");
+	Node node8 = new Node(redGarrison, "Shadaran Hills Garison", "Red");
+	Node node9 = new Node(redSupply, "Bluevale Refuge Supply Camp", "Red");
+	Node node10 = new Node(greenKeep, "Bluebriar Keep", "Green");
+	Node node11 = new Node(redKeep, "Redlake Keep", "Red");
+	Node node12 = new Node(redSupply, "Redwater Lowlands Supply Camp", "Red");
+	Node node13 = new Node(redSupply, "Hero's Lodge Supply Camp", "Red");
+
+	Node[] nodes = {node1, node2, node3, node4, node5, node6, node7, node8, node9, node10, node11, node12, node13};*/
 	String[] emptyText = {"", "", ""};
 
 	ImageIcon icon = createImageIcon("");
 
+	/*Tabs p1 = new Tabs("Tarnished Coast", icon, nodes, "Tarnished Coast Map");
+	Tabs p2 = new Tabs("Blackgate", icon, nodes, "Blackgate Map");
+	Tabs p3 = new Tabs("Jade Quarry", icon, nodes, "Jade Quarry Map");*/
 	Tabs p1;
 	Tabs p2;
 	Tabs p3;
@@ -89,6 +111,7 @@ public class MainGUI extends JPanel implements Runnable{
 
 		/*************************************************************************************
 		 *************************************************************************************/
+		
 		JLabel whiteSpace = new JLabel("");
 
 		JSlider framesPerSecond = new JSlider(0, TRAN_MIN, TRAN_MAX, TRAN_INIT);
@@ -215,7 +238,6 @@ public class MainGUI extends JPanel implements Runnable{
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				t.interrupt();
 				MainGUI.frame.dispose();
 			}
 		});
@@ -227,21 +249,9 @@ public class MainGUI extends JPanel implements Runnable{
 				MainGUI.frame.setState(1);
 			}
 		});
-		
-		/*********************************************
-		 *********************************************/
-		JButton refresh = new JButton("Refresh");
-		refresh.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e)
-			{
-				update();
-			}
-		});
 		JPanel buttonPan = new JPanel();
 		buttonPan.setLayout(new BorderLayout());
 		buttonPan.add(minimize, "North");
-		buttonPan.add(refresh, "Center");
 		buttonPan.add(close, "South");
 
 
@@ -291,36 +301,92 @@ public class MainGUI extends JPanel implements Runnable{
 		    public void paintComponent(Graphics g) {
 		    	super.paintComponent(g);  
 		    	int totalScore = ourWorld.blueScore + ourWorld.greenScore + ourWorld.redScore;
-		    	//System.out.println(ourWorld.blueScore);
+		    	System.out.println(ourWorld.blueScore);
 		    	
 		    	float bluePer = (float)ourWorld.blueScore / (float)totalScore;
 		    	float greenPer = (float)ourWorld.greenScore / (float)totalScore;
 		    	float redPer = (float)ourWorld.redScore / (float)totalScore;
-		    	//System.out.println(bluePer);
-		    	//System.out.println(greenPer);
-		    	//System.out.println(redPer);
+		    	System.out.println(bluePer);
+		    	System.out.println(greenPer);
+		    	System.out.println(redPer);
 		    	
 		    	int blueBlock = (int) (bluePer * 360);
 		    	int greenBlock = (int) (greenPer * 360);
 		    	int redBlock = (int) (redPer * 360);
+		    	//placement borders
+		    	Color firstBorder = new Color(204,204,0);
+		    	Color secondBorder = new Color(128,128,128);
+		    	Color thirdBorder = new Color(255,128,0);
+		    	//team gets placement border
+		    	Color blueBorder=new Color(0, 0, 0);
+		    	Color greenBorder=new Color(0, 0, 0);
+		    	Color redBorder=new Color(0, 0, 0);
 		    	
-		    	//System.out.println(blueBlock);
-		    	//System.out.println(greenBlock);
-		    	//System.out.println(redBlock);
+		    	if(bluePer > greenPer && bluePer > redPer){
+		    		blueBorder = firstBorder;//blue 1st
+		    		if(greenPer > redPer){
+		    			greenBorder = secondBorder;//green 2nd
+		    			redBorder = thirdBorder;//red 3rd
+		    		}
+		    		else{
+		    			redBorder = secondBorder;//red 2nd
+		    			greenBorder = thirdBorder;//green 3rd
+		    		}
+		    	}
+		    	else if(greenPer > bluePer && greenPer > redPer){
+		    		greenBorder = firstBorder;//green 1st
+		    		if(bluePer > redPer){
+		    			blueBorder = secondBorder;//blue 2nd
+		    			redBorder = thirdBorder;//red 3rd
+		    		}
+		    		else{
+		    			redBorder = secondBorder;//red 2nd
+		    			blueBorder = thirdBorder;//blue 3rd
+		    		}
+		    	}
+		    	else if(redPer > bluePer && redPer > greenPer){
+		    		redBorder = firstBorder;//red 1st
+		    		if(bluePer > greenPer){
+		    			blueBorder = secondBorder;//blue 2nd
+		    			greenBorder = thirdBorder;//green 3rd
+		    		}
+		    		else{
+		    			greenBorder = secondBorder;//green 2nd
+		    			blueBorder = thirdBorder;//blue 3rd
+		    		}
+		    	}
+		    	//	
+		    	System.out.println(blueBlock);
+		    	System.out.println(greenBlock);
+		    	System.out.println(redBlock);
 		    	
-		    	
+		    	//BLUE TEAM PLACEMENT BORDER
+		    	g.setColor(blueBorder);  
+		     	g.fillRect(3,3,blueBlock + 1,16);
+		     	
+		     	//BLUE TEAM SCORE		    	
 		    	g.setColor(Color.CYAN);  
 		     	g.fillRect(5,5,blueBlock,10);
 		     	g.setColor(Color.BLACK);
 		     	g.setFont(new Font("default", Font.BOLD, 12));
 		     	g.drawString(Integer.toString(ourWorld.blueScore), 5, 15);
 		     	
+		     	//GREEN TEAM PLACEMENT BORDER
+		     	g.setColor(greenBorder);  
+		     	g.fillRect(5 + blueBlock,3,greenBlock,15);
+		     	
+		     	//GREEN TEAM SCORE
 		     	g.setColor(Color.GREEN);  
 		     	g.fillRect(5 + blueBlock,5,greenBlock,10);
 		     	g.setColor(Color.BLACK);
 
 		     	g.drawString(Integer.toString(ourWorld.greenScore), 5 + blueBlock, 15);
 		     	
+		     	//RED TEAM PLACEMENT BORDER
+		     	g.setColor(redBorder);  
+		     	g.fillRect(5 + blueBlock + greenBlock,3,redBlock,15);
+		     	
+		     	//RED TEAM SCORE
 		     	g.setColor(Color.RED);  
 		     	g.fillRect(5 + blueBlock + greenBlock,5,redBlock,10);
 		     	g.setColor(Color.BLACK);
@@ -385,12 +451,6 @@ public class MainGUI extends JPanel implements Runnable{
 		// Display the window.
 		frame.pack();
 		frame.setVisible(true);
-		
-		if (t == null)
-	    {
-	         t = new Thread (this);
-	         t.start ();
-	    }
 	}
 
 
@@ -409,7 +469,7 @@ public class MainGUI extends JPanel implements Runnable{
 		//XSliderListener() {}
 		public void stateChanged(ChangeEvent e)
 		{
-			/*JSlider source = (JSlider)e.getSource();
+			JSlider source = (JSlider)e.getSource();
 			if (!source.getValueIsAdjusting())
 			{
 				frame.setState(0);
@@ -420,7 +480,7 @@ public class MainGUI extends JPanel implements Runnable{
 				setScrollFrame.setPreferredSize(new Dimension(leftRight, upDown));
 				frame.pack();
 				frame.repaint();
-			}*/
+			}
 		}
 	}
 
@@ -428,7 +488,7 @@ public class MainGUI extends JPanel implements Runnable{
 		//YSliderListener() {}
 		public void stateChanged(ChangeEvent e)
 		{
-			/*JSlider source = (JSlider)e.getSource();
+			JSlider source = (JSlider)e.getSource();
 			if (!source.getValueIsAdjusting())
 			{
 				frame.setState(0);
@@ -439,7 +499,7 @@ public class MainGUI extends JPanel implements Runnable{
 				setScrollFrame.setPreferredSize(new Dimension(leftRight, upDown));
 				frame.pack();
 				frame.repaint();
-			}*/
+			}
 		}
 	}
 
@@ -455,40 +515,4 @@ public class MainGUI extends JPanel implements Runnable{
 			 return null;
 		 }
 	 }
-	 
-	 private void update() {
-			loadJSON ljson = new loadJSON();
-			try {
-				ourWorld = ljson.load(ourWorld.blueHome.map);
-				p1.update(ourWorld.blueHome.nodes);
-				p2.update(ourWorld.greenHome.nodes);
-				p3.update(ourWorld.redHome.nodes);
-				p4.update(ourWorld.center.nodes);
-				tabbedPane.setComponentAt(0, setScrollFrame);
-				tabbedPane.setComponentAt(1, p1.scrollFrame);
-				tabbedPane.setComponentAt(2, p2.scrollFrame);
-				tabbedPane.setComponentAt(3, p3.scrollFrame);
-				tabbedPane.setComponentAt(4, p4.scrollFrame);
-				frame.pack();
-				frame.repaint();
-			} catch (IOException e1) {
-				e1.printStackTrace();
-			} catch (JSONException e1) {
-				e1.printStackTrace();
-			}
-			
-			run();
-			
-		}
-	 
-	 public void run() {
-	      System.out.println("Running ");
-	      try {
-
-	            Thread.sleep(9000);
-	     } catch (InterruptedException e) {
-	         System.out.println("Thread interrupted.");
-	     }
-	     update();
-	   }
 }
