@@ -305,6 +305,7 @@ public class MainGUI extends JPanel implements Runnable{
 		    	int redBlock = (int) (redPer * 360);
 		    	
 		    	//placement borders
+		    	
 		    	Color firstBorder = new Color(204,204,0);
 		    	Color secondBorder = new Color(128,128,128);
 		    	Color thirdBorder = new Color(255,128,0);
@@ -312,6 +313,12 @@ public class MainGUI extends JPanel implements Runnable{
 		    	Color blueBorder=new Color(0, 0, 0);
 		    	Color greenBorder=new Color(0, 0, 0);
 		    	Color redBorder=new Color(0, 0, 0);
+		    	/*
+		    	String BluePlace;
+		    	String RedPlace;
+		    	String GreenPlace;
+		    	String firstPlace = "#1";
+		    	String seco*/
 		    	
 		    	if(bluePer > greenPer && bluePer > redPer){
 		    		blueBorder = firstBorder;//blue 1st
@@ -352,33 +359,33 @@ public class MainGUI extends JPanel implements Runnable{
 		    	System.out.println(redBlock);
 		    	
 		    	//BLUE TEAM PLACEMENT BORDER
-		    	g.setColor(blueBorder);  
+		    	g.setColor(Color.BLUE);  
 		     	g.fillRect(3,3,blueBlock + 1,16);
 		     	
 		     	//BLUE TEAM SCORE		    	
-		    	g.setColor(Color.CYAN);  
+		    	g.setColor(blueBorder);  
 		     	g.fillRect(5,5,blueBlock,10);
 		     	g.setColor(Color.BLACK);
 		     	g.setFont(new Font("default", Font.BOLD, 12));
 		     	g.drawString(Integer.toString(ourWorld.blueScore), 5, 15);
 		     	
 		     	//GREEN TEAM PLACEMENT BORDER
-		     	g.setColor(greenBorder);  
+		     	g.setColor(Color.GREEN);  
 		     	g.fillRect(5 + blueBlock,3,greenBlock,15);
 		     	
 		     	//GREEN TEAM SCORE
-		     	g.setColor(Color.GREEN);  
+		     	g.setColor(greenBorder);  
 		     	g.fillRect(5 + blueBlock,5,greenBlock,10);
 		     	g.setColor(Color.BLACK);
 
 		     	g.drawString(Integer.toString(ourWorld.greenScore), 5 + blueBlock, 15);
 		     	
 		     	//RED TEAM PLACEMENT BORDER
-		     	g.setColor(redBorder);  
+		     	g.setColor(Color.RED);  
 		     	g.fillRect(5 + blueBlock + greenBlock,3,redBlock,15);
 		     	
 		     	//RED TEAM SCORE
-		     	g.setColor(Color.RED);  
+		     	g.setColor(redBorder);  
 		     	g.fillRect(5 + blueBlock + greenBlock,5,redBlock,10);
 		     	g.setColor(Color.BLACK);
 		     	g.drawString(Integer.toString(ourWorld.redScore), 5 + blueBlock + greenBlock, 15);
