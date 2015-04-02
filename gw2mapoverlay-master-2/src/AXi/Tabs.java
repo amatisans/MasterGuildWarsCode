@@ -22,6 +22,8 @@ public class Tabs{
 	public JPanel    panel;
 	
 	public JScrollPane scrollFrame;
+	
+	private JLabel name;
 
 	
 	Node[] node;
@@ -65,6 +67,36 @@ public class Tabs{
 		}
 		scrollFrame = new JScrollPane(panel);
 		panel.setAutoscrolls(true);
+	}
+	
+	public void update(Node[] _node){
+		panel.removeAll();
+		panel.setLayout(new GridLayout((node.length), 1));
+		for(int i=0; i<_node.length; i++){
+			JPanel setter = new JPanel(new BorderLayout());
+			setter.add((new JLabel(_node[i].image)), BorderLayout.WEST);
+			name = new JLabel(_node[i].title);
+			for (int k=0; k<node.length; k++){
+				if(node[k].title.equals(_node[i].title)){
+					if(node[k].info.equals(_node[i].info))
+						name.setForeground(Color.black);
+					else
+						name.setForeground(Color.red);
+				}
+				
+			}
+			setter.add(name, BorderLayout.CENTER);
+			setter.add((new JLabel(_node[i].info)), BorderLayout.EAST);
+			panel.add(setter);
+			
+		}
+		
+		node = _node;
+		scrollFrame = new JScrollPane(panel);
+		panel.setAutoscrolls(true);
+		
+		//panel.revalidate();
+		
 	}
 
 }
