@@ -15,6 +15,8 @@ import java.util.ArrayList;
 
 public class MainGUI extends JPanel implements Runnable{
 	private Thread t;
+	private boolean done = false;
+	public int updateTime = 9;
 	
 	public static final JFrame frame = new JFrame("GuildWars2 Map Overlay");
 
@@ -37,6 +39,8 @@ public class MainGUI extends JPanel implements Runnable{
 	private JPanel    setPanel;
 	private static int trans = 70;
 	private JLabel   transparency = new JLabel ("Set Transparency");
+	private JLabel   updateLabel = new JLabel ("Set UpdateTime (seconds)");
+	private JTextField  updateBox = new JTextField(Integer.toString(updateTime), 10);
 	private JScrollPane setScrollFrame;
 	private static final int TRAN_MIN = 20;
 	private static final int TRAN_MAX = 100;
@@ -91,6 +95,11 @@ public class MainGUI extends JPanel implements Runnable{
 		 *************************************************************************************/
 		JLabel whiteSpace = new JLabel("");
 
+		JPanel updatePan = new JPanel();
+		updatePan.setLayout(new BorderLayout());
+		updatePan.add(updateLabel, "West");
+		updatePan.add(updateBox, "East");
+		
 		JSlider framesPerSecond = new JSlider(0, TRAN_MIN, TRAN_MAX, TRAN_INIT);
 		framesPerSecond.setMajorTickSpacing(20);
 		framesPerSecond.setMinorTickSpacing(1);
@@ -216,6 +225,8 @@ public class MainGUI extends JPanel implements Runnable{
 			public void actionPerformed(ActionEvent e)
 			{
 				t.interrupt();
+				t = null;
+			    done = true;
 				MainGUI.frame.dispose();
 			}
 		});
@@ -230,18 +241,18 @@ public class MainGUI extends JPanel implements Runnable{
 		
 		/*********************************************
 		 *********************************************/
-		JButton refresh = new JButton("Refresh");
+		/*JButton refresh = new JButton("Refresh");
 		refresh.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
 				update();
 			}
-		});
+		});*/
 		JPanel buttonPan = new JPanel();
 		buttonPan.setLayout(new BorderLayout());
 		buttonPan.add(minimize, "North");
-		buttonPan.add(refresh, "Center");
+		//buttonPan.add(refresh, "Center");
 		buttonPan.add(close, "South");
 
 
@@ -253,6 +264,7 @@ public class MainGUI extends JPanel implements Runnable{
 
 		setPanel = new JPanel(false);
 		setPanel.setLayout(new GridLayout(6, 2));
+		setPanel.add(updatePan);
 		setPanel.add(tranPan);
 		setPanel.add(xSliderPan);
 		setPanel.add(ySliderPan);
@@ -286,6 +298,8 @@ public class MainGUI extends JPanel implements Runnable{
 		//add(redScore, "North");
 		//add(blueScore, "North");
 		//add(greenScore, "North");
+		
+		JLabel time = new JLabel("Match ending at " + ourWorld.endTime);
 		
 		class RectDraw extends JPanel {
 		   public void paintComponent(Graphics g) {
@@ -398,7 +412,8 @@ public class MainGUI extends JPanel implements Runnable{
 		}
 		RectDraw newrect= new RectDraw();
 		add(newrect, "North");
-		add(tabbedPane, "South");
+		add(tabbedPane, "Center");
+		add(time, "South");
 		//tabbedPane.setTabLayoutPolicy(JTabbedPane.SCROLL_TAB_LAYOUT);
 	}
 
@@ -541,18 +556,21 @@ public class MainGUI extends JPanel implements Runnable{
 				e1.printStackTrace();
 			}
 			
-			run();
+			System.out.println("updated ");
+		    run();
 			
 		}
 	 
 	 public void run() {
-	      System.out.println("Running ");
+	      
 	      try {
-
-	            Thread.sleep(9000);
+	    	  System.out.println("updated ");
+	    	  updateTime = Integer.parseInt(updateBox.getText());
+	            Thread.sleep(updateTime * 1000);
 	     } catch (InterruptedException e) {
 	         System.out.println("Thread interrupted.");
 	     }
-	     update();
+	      if (done != true)
+	        update();
 	   }
 }

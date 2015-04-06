@@ -7,6 +7,8 @@ public class WorldInfo {
 	public int redScore;
 	public int blueScore;
 	public int greenScore;
+	
+	public String endTime;
 
 	public AreaInfo redHome;
 	public AreaInfo greenHome;

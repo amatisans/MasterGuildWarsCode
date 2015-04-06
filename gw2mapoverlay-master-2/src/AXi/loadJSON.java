@@ -18,6 +18,7 @@ import org.json.JSONObject;
 public class loadJSON {
 	public static WorldInfo ourWorld;
 	
+	private static String endtime;
 	private static int redId, greenId, blueId;
 	private static String redName, greenName, blueName;
 
@@ -100,6 +101,7 @@ public class loadJSON {
 				redId = wvw_matches.getJSONObject(i).getInt("red_world_id");
 				blueId = wvw_matches.getJSONObject(i).getInt("blue_world_id");
 				greenId = wvw_matches.getJSONObject(i).getInt("green_world_id");
+				endtime = wvw_matches.getJSONObject(i).getString("end_time");
 				FillInNames();
 				return queryMap(wvw_matches.getJSONObject(i).getString("wvw_match_id"));
 			}
@@ -107,6 +109,7 @@ public class loadJSON {
 				redId = wvw_matches.getJSONObject(i).getInt("red_world_id");
 				blueId = wvw_matches.getJSONObject(i).getInt("blue_world_id");
 				greenId = wvw_matches.getJSONObject(i).getInt("green_world_id");
+				endtime = wvw_matches.getJSONObject(i).getString("end_time");
 				FillInNames();
 				return queryMap(wvw_matches.getJSONObject(i).getString("wvw_match_id"));
 			}
@@ -114,6 +117,7 @@ public class loadJSON {
 				redId = wvw_matches.getJSONObject(i).getInt("red_world_id");
 				blueId = wvw_matches.getJSONObject(i).getInt("blue_world_id");
 				greenId = wvw_matches.getJSONObject(i).getInt("green_world_id");
+				endtime = wvw_matches.getJSONObject(i).getString("end_time");
 				FillInNames();
 				return queryMap(wvw_matches.getJSONObject(i).getString("wvw_match_id"));
 			}
@@ -145,6 +149,7 @@ public class loadJSON {
 		wi.greenHome = printMap(greenMap);
 		wi.blueHome = printMap(blueMap);
 		wi.center = printMap(center);
+		wi.endTime = endtime;
 		
 		return wi;
 	}

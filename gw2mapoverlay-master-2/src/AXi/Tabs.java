@@ -80,8 +80,10 @@ public class Tabs{
 				if(node[k].title.equals(_node[i].title)){
 					if(node[k].info.equals(_node[i].info))
 						name.setForeground(Color.black);
-					else
+					else {
+						name.setText(name.getText() + " taken from " + node[k].info);
 						name.setForeground(Color.red);
+					}
 				}
 				
 			}
