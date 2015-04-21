@@ -14,6 +14,7 @@ import org.json.JSONException;
 public class Main extends Application {
 	private static String server;
 	public static WorldInfo wi;
+	public static WorldInfo oldwi;
 	
 	@Override
 	public void start(Stage stage) {
@@ -22,7 +23,7 @@ public class Main extends Application {
 			Scene scene = new Scene(root);
 			scene.setFill(null);
 			stage.setScene(scene);
-			stage.setOpacity(0.9);
+			stage.setOpacity(0.7);
 			stage.setAlwaysOnTop(true);
 			stage.initStyle(StageStyle.UTILITY);
 			stage.show();
@@ -51,6 +52,22 @@ public class Main extends Application {
 			e.printStackTrace();
 		}		
 		
+		oldwi = wi;
+		
 		Application.launch(Main.class, args);
+	}
+
+	public static WorldInfo reload() {
+		oldwi = wi;
+		loadJSON lj = new loadJSON();
+		try {
+			wi = lj.load(server);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}	
+		
+		return wi;
 	}
 }

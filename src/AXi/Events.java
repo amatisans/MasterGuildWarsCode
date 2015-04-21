@@ -20,6 +20,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 
 import javax.swing.Timer;
 
@@ -218,9 +219,6 @@ public class Events {
 		tabCenterTab.setText(Main.wi.center.map);
 		tabCenterTab.setTooltip(new Tooltip("E. Battlegrounds Server"));
 		updateInfo(Main.wi);
-		//timer = new Timer(2000, (ActionListener) new UpdateTask());
-		//timer.setInitialDelay(2000);
-		//timer.start();
 		
 		java.util.Timer timer = new java.util.Timer();
 
@@ -228,39 +226,61 @@ public class Events {
 		    public void run() {
 		         Platform.runLater(new Runnable() {
 		            public void run() {
-		        		updateInfo(Main.wi);
+		        		updateInfo(Main.reload());
 		            }
 		        });
 		    }
 		}, 2000, 2000);
 	}
 	
-	class UpdateTask extends TimerTask {
-		public void run(){
-			//updateInfo(Main.wi);
-		}
-		
-	}
-	
 	public void updateInfo (WorldInfo wi){	
-		System.out.println(green[2][0].getId());
+		WorldInfo oldwi = Main.oldwi;
 	    for(int i=0; i < green.length; i++){
+	    	//GREEN
 	    	Image greenImage = new Image(getClass().getResourceAsStream(wi.greenHome.nodes[i].image));
 	    	green[i][0].setGraphic(new ImageView(greenImage));
-	    	green[i][1].setText(wi.greenHome.nodes[i].title);
+	    	if(takenFrom(oldwi.greenHome.nodes[i], wi.greenHome.nodes[i])){
+	    		green[i][1].setText(wi.greenHome.nodes[i].title + " Taken From " + oldwi.greenHome.nodes[i].info);
+	    		green[i][1].setTextFill(Color.RED);
+	    	}else{
+	    		green[i][1].setText(wi.greenHome.nodes[i].title);
+	    		green[i][1].setTextFill(Color.BLACK);
+	    	}
 	    	green[i][2].setText(wi.greenHome.nodes[i].info);
 	    	
+	    	//BLUE
 	    	Image blueImage = new Image(getClass().getResourceAsStream(wi.blueHome.nodes[i].image));
 	    	blue[i][0].setGraphic(new ImageView(blueImage));
-	    	blue[i][1].setText(wi.blueHome.nodes[i].title);
+	    	if(takenFrom(oldwi.blueHome.nodes[i], wi.blueHome.nodes[i])){
+	    		blue[i][1].setText(wi.blueHome.nodes[i].title + " Taken From " + oldwi.blueHome.nodes[i].info);
+	    		blue[i][1].setTextFill(Color.RED);
+	    	}else{
+	    		blue[i][1].setText(wi.blueHome.nodes[i].title);
+	    		blue[i][1].setTextFill(Color.BLACK);
+	    	}
 	    	blue[i][2].setText(wi.blueHome.nodes[i].info);
 	    	
+	    	//RED
 	    	Image redImage = new Image(getClass().getResourceAsStream(wi.redHome.nodes[i].image));
 	    	red[i][0].setGraphic(new ImageView(redImage));
-	    	red[i][1].setText(wi.redHome.nodes[i].title);
-	    	red[i][1].setText(wi.redHome.nodes[i].info);
+	    	if(takenFrom(oldwi.redHome.nodes[i], wi.redHome.nodes[i])){
+	    		red[i][1].setText(wi.redHome.nodes[i].title + " Taken From " + oldwi.redHome.nodes[i].info);
+	    		red[i][1].setTextFill(Color.RED);
+	    	}else{
+	    		red[i][1].setText(wi.redHome.nodes[i].title);
+	    		red[i][1].setTextFill(Color.BLACK);
+	    	}
+	    	red[i][2].setText(wi.redHome.nodes[i].info);
 	    }
 	    
+	}
+	
+	private boolean takenFrom(GWNode oldNode, GWNode newNode){
+		if(newNode.info.equals(oldNode.info))
+			return false;
+		else {
+			return true;//newNode.title + " taken from " + oldNode.info;
+		}
 	}
 	
 
