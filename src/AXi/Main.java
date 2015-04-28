@@ -25,7 +25,7 @@ public class Main extends Application {
 			Scene scene = new Scene(root);
 			scene.setFill(null);
 			stage.setScene(scene);
-			stage.setOpacity(0.9);
+			stage.setOpacity(0.7);
 			stage.setAlwaysOnTop(true);
 			stage.initStyle(StageStyle.UTILITY);
 			stage.show();

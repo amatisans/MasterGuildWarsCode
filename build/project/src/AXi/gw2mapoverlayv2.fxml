@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.canvas.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import java.lang.*?>
@@ -9,1055 +10,1096 @@
 
 <AnchorPane id="anchorPaneMain" fx:id="anchorPaneMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AXi.Events">
 	<children>
-		<TabPane id="tabPaneMain" fx:id="tabPaneMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="300.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-			<tabs>
-				<Tab id="tabGreenTab" fx:id="tabGreenTab" text="Green">
-               <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <GridPane prefHeight="559.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane prefHeight="588.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+      		<TabPane id="tabPaneMain" fx:id="tabPaneMain" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+      			<tabs>
+      				<Tab id="tabGreenTab" fx:id="tabGreenTab" text="Green">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0">
-                                 <center>
-                                    <Label id="green10" fx:id="green10" text="Garrison" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green00" fx:id="green00" BorderPane.alignment="CENTER_LEFT" />
-                                 </left>
-                                 <right>
-                                    <Label id="green20" fx:id="green20" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                                 <center>
-                                    <Label id="green11" fx:id="green11" text="Ascension Bay" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green01" fx:id="green01" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="green21" fx:id="green21" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
-                                 <center>
-                                    <Label id="green12" fx:id="green12" text="Askalion Hills" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green02" fx:id="green02" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="green22" fx:id="green22" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
-                                 <center>
-                                    <Label id="green13" fx:id="green13" text="The Spiritholme" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green03" fx:id="green03" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="green23" fx:id="green23" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
-                                 <center>
-                                    <Label id="green14" fx:id="green14" text="Woodhaven" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green04" fx:id="green04" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="green24" fx:id="green24" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
-                                 <center>
-                                    <Label id="green15" fx:id="green15" text="Dawn's Eyrie" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green05" fx:id="green05" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="green25" fx:id="green25" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
-                                 <center>
-                                    <Label id="green16" fx:id="green16" text="Godslore" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green06" fx:id="green06" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="green26" fx:id="green26" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
-                                 <center>
-                                    <Label id="green17" fx:id="green17" text="Stargrove" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green07" fx:id="green07" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="green27" fx:id="green27" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="8">
-                                 <center>
-                                    <Label id="green18" fx:id="green18" text="Redvale Refuge" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green08" fx:id="green08" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="green28" fx:id="green28" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="9">
-                                 <center>
-                                    <Label id="green19" fx:id="green19" text="Redbriar" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green09" fx:id="green09" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="green29" fx:id="green29" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="10">
-                                 <center>
-                                    <Label id="green110" fx:id="green110" text="Greenlake" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green010" fx:id="green010" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="green210" fx:id="green210" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="11">
-                                 <center>
-                                    <Label id="green111" fx:id="green111" text="Greenwater Lowlands" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green011" fx:id="green011" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="green211" fx:id="green211" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="12">
-                                 <center>
-                                    <Label id="green112" fx:id="green112" text="Champion's Demise" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green012" fx:id="green012" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="green212" fx:id="green212" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="13">
-                                 <center>
-                                    <Label id="green113" fx:id="green113" text="Bauer's Estate" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green013" fx:id="green013" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="green213" fx:id="green213" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="14">
-                                 <center>
-                                    <Label id="green114" fx:id="green114" text="Orchard Overlook" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green014" fx:id="green014" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="green214" fx:id="green214" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="15">
-                                 <center>
-                                    <Label id="green115" fx:id="green115" text="Battle's Hollow" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green015" fx:id="green015" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="green215" fx:id="green215" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="16">
-                                 <center>
-                                    <Label id="green116" fx:id="green116" text="Carver's Ascent" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green016" fx:id="green016" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="green216" fx:id="green216" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="17">
-                                 <center>
-                                    <Label id="green117" fx:id="green117" text="Temple of Lost Prayers" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green017" fx:id="green017" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="green217" fx:id="green217" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
+                              <GridPane prefHeight="559.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <center>
+                                          <Label id="green10" fx:id="green10" text="Garrison" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green00" fx:id="green00" BorderPane.alignment="CENTER_LEFT" />
+                                       </left>
+                                       <right>
+                                          <Label id="green20" fx:id="green20" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <center>
+                                          <Label id="green11" fx:id="green11" text="Ascension Bay" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green01" fx:id="green01" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="green21" fx:id="green21" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <center>
+                                          <Label id="green12" fx:id="green12" text="Askalion Hills" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green02" fx:id="green02" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="green22" fx:id="green22" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                       <center>
+                                          <Label id="green13" fx:id="green13" text="The Spiritholme" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green03" fx:id="green03" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="green23" fx:id="green23" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                       <center>
+                                          <Label id="green14" fx:id="green14" text="Woodhaven" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green04" fx:id="green04" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="green24" fx:id="green24" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                       <center>
+                                          <Label id="green15" fx:id="green15" text="Dawn's Eyrie" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green05" fx:id="green05" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="green25" fx:id="green25" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                                       <center>
+                                          <Label id="green16" fx:id="green16" text="Godslore" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green06" fx:id="green06" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="green26" fx:id="green26" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
+                                       <center>
+                                          <Label id="green17" fx:id="green17" text="Stargrove" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green07" fx:id="green07" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="green27" fx:id="green27" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="8">
+                                       <center>
+                                          <Label id="green18" fx:id="green18" text="Redvale Refuge" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green08" fx:id="green08" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="green28" fx:id="green28" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="9">
+                                       <center>
+                                          <Label id="green19" fx:id="green19" text="Redbriar" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green09" fx:id="green09" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="green29" fx:id="green29" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="10">
+                                       <center>
+                                          <Label id="green110" fx:id="green110" text="Greenlake" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green010" fx:id="green010" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="green210" fx:id="green210" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="11">
+                                       <center>
+                                          <Label id="green111" fx:id="green111" text="Greenwater Lowlands" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green011" fx:id="green011" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="green211" fx:id="green211" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="12">
+                                       <center>
+                                          <Label id="green112" fx:id="green112" text="Champion's Demise" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green012" fx:id="green012" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="green212" fx:id="green212" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="13">
+                                       <center>
+                                          <Label id="green113" fx:id="green113" text="Bauer's Estate" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green013" fx:id="green013" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="green213" fx:id="green213" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="14">
+                                       <center>
+                                          <Label id="green114" fx:id="green114" text="Orchard Overlook" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green014" fx:id="green014" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="green214" fx:id="green214" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="15">
+                                       <center>
+                                          <Label id="green115" fx:id="green115" text="Battle's Hollow" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green015" fx:id="green015" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="green215" fx:id="green215" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="16">
+                                       <center>
+                                          <Label id="green116" fx:id="green116" text="Carver's Ascent" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green016" fx:id="green016" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="green216" fx:id="green216" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="17">
+                                       <center>
+                                          <Label id="green117" fx:id="green117" text="Temple of Lost Prayers" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green017" fx:id="green017" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="green217" fx:id="green217" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
                            </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                     </children>
-                  </AnchorPane>
-               </content>
-				</Tab>
-				<Tab id="tabBlueTab" fx:id="tabBlueTab" text="Blue">
-					<content>
-						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <GridPane prefHeight="559.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        </AnchorPane>
+                     </content>
+      				</Tab>
+      				<Tab id="tabBlueTab" fx:id="tabBlueTab" text="Blue">
+      					<content>
+      						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0">
-                                 <center>
-                                    <Label id="blue10" fx:id="blue10" text="Garrison" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="blue00" fx:id="blue00" BorderPane.alignment="CENTER_LEFT" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue20" fx:id="blue20" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                                 <center>
-                                    <Label id="blue11" fx:id="blue11" text="Ascension Bay" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="blue01" fx:id="blue01" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue21" fx:id="blue21" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
-                                 <center>
-                                    <Label id="blue12" fx:id="blue12" text="Askalion Hills" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="blue02" fx:id="blue02" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue22" fx:id="blue22" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
-                                 <center>
-                                    <Label id="blue13" fx:id="blue13" text="The Spiritholme" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="blue03" fx:id="blue03" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue23" fx:id="blue23" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
-                                 <center>
-                                    <Label id="blue14" fx:id="blue14" text="Woodhaven" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="blue04" fx:id="blue04" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue24" fx:id="blue24" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
-                                 <center>
-                                    <Label id="blue15" fx:id="blue15" text="Dawn's Eyrie" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="blue05" fx:id="blue05" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue25" fx:id="blue25" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
-                                 <center>
-                                    <Label id="blue16" fx:id="blue16" text="Godslore" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="blue06" fx:id="blue06" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue26" fx:id="blue26" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
-                                 <center>
-                                    <Label id="blue17" fx:id="blue17" text="Stargrove" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="blue07" fx:id="blue07" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue27" fx:id="blue27" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="8">
-                                 <center>
-                                    <Label id="blue18" fx:id="blue18" text="Redvale Refuge" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="blue08" fx:id="blue08" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue28" fx:id="blue28" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="9">
-                                 <center>
-                                    <Label id="blue19" fx:id="blue19" text="Redbriar" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="blue09" fx:id="blue09" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue29" fx:id="blue29" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="10">
-                                 <center>
-                                    <Label id="blue110" fx:id="blue110" text="Greenlake" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="blue011" fx:id="blue010" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue210" fx:id="blue210" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="11">
-                                 <center>
-                                    <Label id="blue111" fx:id="blue111" text="Greenwater Lowlands" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="green011" fx:id="blue011" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue211" fx:id="blue211" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="12">
-                                 <center>
-                                    <Label id="blue112" fx:id="blue112" text="Champion's Demise" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="blue012" fx:id="blue012" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue212" fx:id="blue212" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="13">
-                                 <center>
-                                    <Label id="blue113" fx:id="blue113" text="Bauer's Estate" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="blue013" fx:id="blue013" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue213" fx:id="blue213" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="14">
-                                 <center>
-                                    <Label id="blue114" fx:id="blue114" text="Orchard Overlook" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="blue014" fx:id="blue014" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue214" fx:id="blue214" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="15">
-                                 <center>
-                                    <Label id="blue115" fx:id="blue115" text="Battle's Hollow" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="blue015" fx:id="blue015" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue215" fx:id="blue215" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="16">
-                                 <center>
-                                    <Label id="blue116" fx:id="blue116" text="Carver's Ascent" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="blue016" fx:id="blue016" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue216" fx:id="blue216" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="17">
-                                 <center>
-                                    <Label id="blue117" fx:id="blue117" text="Temple of Lost Prayers" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="blue017" fx:id="blue017" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="blue217" fx:id="blue217" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
+                              <GridPane prefHeight="559.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <center>
+                                          <Label id="blue10" fx:id="blue10" text="Garrison" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="blue00" fx:id="blue00" BorderPane.alignment="CENTER_LEFT" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue20" fx:id="blue20" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <center>
+                                          <Label id="blue11" fx:id="blue11" text="Ascension Bay" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="blue01" fx:id="blue01" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue21" fx:id="blue21" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <center>
+                                          <Label id="blue12" fx:id="blue12" text="Askalion Hills" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="blue02" fx:id="blue02" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue22" fx:id="blue22" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                       <center>
+                                          <Label id="blue13" fx:id="blue13" text="The Spiritholme" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="blue03" fx:id="blue03" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue23" fx:id="blue23" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                       <center>
+                                          <Label id="blue14" fx:id="blue14" text="Woodhaven" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="blue04" fx:id="blue04" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue24" fx:id="blue24" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                       <center>
+                                          <Label id="blue15" fx:id="blue15" text="Dawn's Eyrie" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="blue05" fx:id="blue05" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue25" fx:id="blue25" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                                       <center>
+                                          <Label id="blue16" fx:id="blue16" text="Godslore" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="blue06" fx:id="blue06" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue26" fx:id="blue26" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
+                                       <center>
+                                          <Label id="blue17" fx:id="blue17" text="Stargrove" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="blue07" fx:id="blue07" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue27" fx:id="blue27" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="8">
+                                       <center>
+                                          <Label id="blue18" fx:id="blue18" text="Redvale Refuge" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="blue08" fx:id="blue08" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue28" fx:id="blue28" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="9">
+                                       <center>
+                                          <Label id="blue19" fx:id="blue19" text="Redbriar" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="blue09" fx:id="blue09" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue29" fx:id="blue29" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="10">
+                                       <center>
+                                          <Label id="blue110" fx:id="blue110" text="Greenlake" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="blue011" fx:id="blue010" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue210" fx:id="blue210" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="11">
+                                       <center>
+                                          <Label id="blue111" fx:id="blue111" text="Greenwater Lowlands" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="green011" fx:id="blue011" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue211" fx:id="blue211" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="12">
+                                       <center>
+                                          <Label id="blue112" fx:id="blue112" text="Champion's Demise" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="blue012" fx:id="blue012" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue212" fx:id="blue212" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="13">
+                                       <center>
+                                          <Label id="blue113" fx:id="blue113" text="Bauer's Estate" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="blue013" fx:id="blue013" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue213" fx:id="blue213" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="14">
+                                       <center>
+                                          <Label id="blue114" fx:id="blue114" text="Orchard Overlook" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="blue014" fx:id="blue014" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue214" fx:id="blue214" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="15">
+                                       <center>
+                                          <Label id="blue115" fx:id="blue115" text="Battle's Hollow" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="blue015" fx:id="blue015" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue215" fx:id="blue215" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="16">
+                                       <center>
+                                          <Label id="blue116" fx:id="blue116" text="Carver's Ascent" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="blue016" fx:id="blue016" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue216" fx:id="blue216" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="17">
+                                       <center>
+                                          <Label id="blue117" fx:id="blue117" text="Temple of Lost Prayers" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="blue017" fx:id="blue017" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="blue217" fx:id="blue217" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
                            </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                     </children>
-						</AnchorPane>
-					</content>
-				</Tab>
-				<Tab id="tabRedTab" fx:id="tabRedTab" text="Red">
-					<content>
-						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <GridPane prefHeight="559.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      						</AnchorPane>
+      					</content>
+      				</Tab>
+      				<Tab id="tabRedTab" fx:id="tabRedTab" text="Red">
+      					<content>
+      						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0">
-                                 <center>
-                                    <Label id="red10" fx:id="red10" text="Garrison" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red00" fx:id="red00" BorderPane.alignment="CENTER_LEFT" />
-                                 </left>
-                                 <right>
-                                    <Label id="red20" fx:id="red20" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                                 <center>
-                                    <Label id="red11" fx:id="red11" text="Ascension Bay" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red01" fx:id="red01" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="red21" fx:id="red21" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
-                                 <center>
-                                    <Label id="red12" fx:id="red12" text="Askalion Hills" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red02" fx:id="red02" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="red22" fx:id="red22" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
-                                 <center>
-                                    <Label id="red13" fx:id="red13" text="The Spiritholme" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red03" fx:id="red03" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="red23" fx:id="red23" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
-                                 <center>
-                                    <Label id="red14" fx:id="red14" text="Woodhaven" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red04" fx:id="red04" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="red24" fx:id="red24" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
-                                 <center>
-                                    <Label id="red15" fx:id="red15" text="Dawn's Eyrie" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red05" fx:id="red05" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="red25" fx:id="red25" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
-                                 <center>
-                                    <Label id="red16" fx:id="red16" text="Godslore" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red06" fx:id="red06" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="red26" fx:id="red26" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
-                                 <center>
-                                    <Label id="red17" fx:id="red17" text="Stargrove" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red07" fx:id="red07" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="red27" fx:id="red27" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="8">
-                                 <center>
-                                    <Label id="red18" fx:id="red18" text="Redvale Refuge" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red08" fx:id="red08" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="red28" fx:id="red28" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="9">
-                                 <center>
-                                    <Label id="red19" fx:id="red19" text="Redbriar" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red09" fx:id="red09" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="red29" fx:id="red29" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="10">
-                                 <center>
-                                    <Label id="red110" fx:id="red110" text="Greenlake" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red010" fx:id="red010" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="red210" fx:id="red210" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="11">
-                                 <center>
-                                    <Label id="red111" fx:id="red111" text="Greenwater Lowlands" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red011" fx:id="red011" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="red211" fx:id="red211" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="12">
-                                 <center>
-                                    <Label id="red112" fx:id="red112" text="Champion's Demise" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red012" fx:id="red012" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="red212" fx:id="red212" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="13">
-                                 <center>
-                                    <Label id="red113" fx:id="red113" text="Bauer's Estate" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red013" fx:id="red013" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="red213" fx:id="red213" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="14">
-                                 <center>
-                                    <Label id="red114" fx:id="red114" text="Orchard Overlook" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red014" fx:id="red014" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="red214" fx:id="red214" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="15">
-                                 <center>
-                                    <Label id="red115" fx:id="red115" text="Battle's Hollow" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red015" fx:id="red015" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="red215" fx:id="red215" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="16">
-                                 <center>
-                                    <Label id="red116" fx:id="red116" text="Carver's Ascent" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red016" fx:id="red016" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="red216" fx:id="red216" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="17">
-                                 <center>
-                                    <Label id="red117" fx:id="red117" text="Temple of Lost Prayers" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label id="red017" fx:id="red017" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label id="red217" fx:id="red217" text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
+                              <GridPane prefHeight="559.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <center>
+                                          <Label id="red10" fx:id="red10" text="Garrison" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red00" fx:id="red00" BorderPane.alignment="CENTER_LEFT" />
+                                       </left>
+                                       <right>
+                                          <Label id="red20" fx:id="red20" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <center>
+                                          <Label id="red11" fx:id="red11" text="Ascension Bay" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red01" fx:id="red01" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="red21" fx:id="red21" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <center>
+                                          <Label id="red12" fx:id="red12" text="Askalion Hills" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red02" fx:id="red02" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="red22" fx:id="red22" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                       <center>
+                                          <Label id="red13" fx:id="red13" text="The Spiritholme" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red03" fx:id="red03" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="red23" fx:id="red23" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                       <center>
+                                          <Label id="red14" fx:id="red14" text="Woodhaven" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red04" fx:id="red04" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="red24" fx:id="red24" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                       <center>
+                                          <Label id="red15" fx:id="red15" text="Dawn's Eyrie" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red05" fx:id="red05" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="red25" fx:id="red25" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                                       <center>
+                                          <Label id="red16" fx:id="red16" text="Godslore" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red06" fx:id="red06" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="red26" fx:id="red26" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
+                                       <center>
+                                          <Label id="red17" fx:id="red17" text="Stargrove" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red07" fx:id="red07" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="red27" fx:id="red27" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="8">
+                                       <center>
+                                          <Label id="red18" fx:id="red18" text="Redvale Refuge" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red08" fx:id="red08" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="red28" fx:id="red28" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="9">
+                                       <center>
+                                          <Label id="red19" fx:id="red19" text="Redbriar" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red09" fx:id="red09" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="red29" fx:id="red29" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="10">
+                                       <center>
+                                          <Label id="red110" fx:id="red110" text="Greenlake" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red010" fx:id="red010" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="red210" fx:id="red210" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="11">
+                                       <center>
+                                          <Label id="red111" fx:id="red111" text="Greenwater Lowlands" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red011" fx:id="red011" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="red211" fx:id="red211" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="12">
+                                       <center>
+                                          <Label id="red112" fx:id="red112" text="Champion's Demise" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red012" fx:id="red012" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="red212" fx:id="red212" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="13">
+                                       <center>
+                                          <Label id="red113" fx:id="red113" text="Bauer's Estate" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red013" fx:id="red013" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="red213" fx:id="red213" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="14">
+                                       <center>
+                                          <Label id="red114" fx:id="red114" text="Orchard Overlook" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red014" fx:id="red014" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="red214" fx:id="red214" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="15">
+                                       <center>
+                                          <Label id="red115" fx:id="red115" text="Battle's Hollow" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red015" fx:id="red015" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="red215" fx:id="red215" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="16">
+                                       <center>
+                                          <Label id="red116" fx:id="red116" text="Carver's Ascent" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red016" fx:id="red016" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="red216" fx:id="red216" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="17">
+                                       <center>
+                                          <Label id="red117" fx:id="red117" text="Temple of Lost Prayers" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="red017" fx:id="red017" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="red217" fx:id="red217" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
                            </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                     </children>
-						</AnchorPane>
-					</content>
-				</Tab>
-            <Tab id="tabCenterTab" fx:id="tabCenterTab" text="Center">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <GridPane prefHeight="559.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      						</AnchorPane>
+      					</content>
+      				</Tab>
+                  <Tab id="tabCenterTab" fx:id="tabCenterTab" text="Center">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0">
-                                 <center>
-                                    <Label text="Garrison" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER_LEFT" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                                 <center>
-                                    <Label text="Dreaming Bay" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
-                                 <center>
-                                    <Label text="Etheron Hills" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
-                                 <center>
-                                    <Label text="The Godsword" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
-                                 <center>
-                                    <Label text="Longview" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
-                                 <center>
-                                    <Label text="Cliffside" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
-                                 <center>
-                                    <Label text="Arah's Hope" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
-                                 <center>
-                                    <Label text="Astralholme" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="8">
-                                 <center>
-                                    <Label text="Greenvale Refuge" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="9">
-                                 <center>
-                                    <Label text="Greenbriar" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="10">
-                                 <center>
-                                    <Label text="Bluelake" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="11">
-                                 <center>
-                                    <Label text="Bluewather Lowlands" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="12">
-                                 <center>
-                                    <Label text="Victor's Lodge" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="13">
-                                 <center>
-                                    <Label text="Bauer's Estate" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="14">
-                                 <center>
-                                    <Label text="Orchard Overlook" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="15">
-                                 <center>
-                                    <Label text="Battle's Hollow" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="16">
-                                 <center>
-                                    <Label text="Carver's Ascent" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="17">
-                                 <center>
-                                    <Label text="Victor's Lodge" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="18">
-                                 <center>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="19">
-                                 <center>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="20">
-                                 <center>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="21">
-                                 <center>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </center>
-                                 <left>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </left>
-                                 <right>
-                                    <Label text="Label" BorderPane.alignment="CENTER" />
-                                 </right>
-                              </BorderPane>
+                              <GridPane prefHeight="559.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <center>
+                                          <Label id="center10" fx:id="center10" text="Garrison" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center00" fx:id="center00" BorderPane.alignment="CENTER_LEFT" />
+                                       </left>
+                                       <right>
+                                          <Label id="center20" fx:id="center20" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <center>
+                                          <Label id="center11" fx:id="center11" text="Dreaming Bay" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center01" fx:id="center01" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center21" fx:id="center21" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <center>
+                                          <Label id="center12" fx:id="center12" text="Etheron Hills" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center02" fx:id="center02" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center22" fx:id="center22" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                       <center>
+                                          <Label id="center13" fx:id="center13" text="The Godsword" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center03" fx:id="center03" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center23" fx:id="center23" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                       <center>
+                                          <Label id="center14" fx:id="center14" text="Longview" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center04" fx:id="center04" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center24" fx:id="center24" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                       <center>
+                                          <Label id="center15" fx:id="center15" text="Cliffside" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center05" fx:id="center05" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center25" fx:id="center25" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                                       <center>
+                                          <Label id="center16" fx:id="center16" text="Arah's Hope" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center06" fx:id="center06" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center26" fx:id="center26" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
+                                       <center>
+                                          <Label id="center17" fx:id="center17" text="Astralholme" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center07" fx:id="center07" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center27" fx:id="center27" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="8">
+                                       <center>
+                                          <Label id="center18" fx:id="center18" text="Greenvale Refuge" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center08" fx:id="center08" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center28" fx:id="center28" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="9">
+                                       <center>
+                                          <Label id="center19" fx:id="center19" text="Greenbriar" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center09" fx:id="center09" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center29" fx:id="center29" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="10">
+                                       <center>
+                                          <Label id="center110" fx:id="center110" text="Bluelake" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center010" fx:id="center010" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center210" fx:id="center210" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="11">
+                                       <center>
+                                          <Label id="center111" fx:id="center111" text="Bluewather Lowlands" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center011" fx:id="center011" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center211" fx:id="center211" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="12">
+                                       <center>
+                                          <Label id="center112" fx:id="center112" text="Victor's Lodge" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center012" fx:id="center012" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center212" fx:id="center212" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="13">
+                                       <center>
+                                          <Label id="center113" fx:id="center113" text="Bauer's Estate" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center013" fx:id="center013" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center213" fx:id="center213" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="14">
+                                       <center>
+                                          <Label id="center114" fx:id="center114" text="Orchard Overlook" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center014" fx:id="center014" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center214" fx:id="center214" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="15">
+                                       <center>
+                                          <Label id="center115" fx:id="center115" text="Battle's Hollow" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center015" fx:id="center015" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center215" fx:id="center215" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="16">
+                                       <center>
+                                          <Label id="center116" fx:id="center116" text="Carver's Ascent" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center016" fx:id="center016" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center216" fx:id="center216" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="17">
+                                       <center>
+                                          <Label id="center117" fx:id="center117" text="Victor's Lodge" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center017" fx:id="center017" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center217" fx:id="center217" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="18">
+                                       <center>
+                                          <Label id="center118" fx:id="center118" text="Label" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center018" fx:id="center018" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center218" fx:id="center218" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="19">
+                                       <center>
+                                          <Label id="center119" fx:id="center119" text="Label" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center019" fx:id="center019" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center219" fx:id="center219" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="20">
+                                       <center>
+                                          <Label id="center120" fx:id="center120" text="Label" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center020" fx:id="center020" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center220" fx:id="center220" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="21">
+                                       <center>
+                                          <Label id="center121" fx:id="center121" text="Label" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <left>
+                                          <Label id="center021" fx:id="center021" BorderPane.alignment="CENTER" />
+                                       </left>
+                                       <right>
+                                          <Label id="center221" fx:id="center221" text="Label" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
                            </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                     </children>
-                  </AnchorPane>
-              </content>
-            </Tab>
-				<Tab id="tabSettingsTab" fx:id="tabSettingsTab" text="Settings">
-					<content>
-						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-							<children>
-								<GridPane layoutX="50.0" layoutY="199.0" prefHeight="559.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-									<columnConstraints>
-										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-									</columnConstraints>
-									<rowConstraints>
-										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-									</rowConstraints>
-									<children>
-										<BorderPane prefHeight="200.0" prefWidth="200.0">
-											<center>
-												<Label fx:id="labelTransparency" text="Set Transparency" BorderPane.alignment="CENTER" />
-											</center>
-										</BorderPane>
-										<BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
-											<center>
-												<Slider id="sliderOpac" fx:id="sliderOpac" min="20.0" showTickLabels="true" showTickMarks="true" value="20.0" BorderPane.alignment="CENTER" />
-											</center>
-										</BorderPane>
-										<BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-											<top>
-												<Label fx:id="labelGreen" text="Green" BorderPane.alignment="CENTER" />
-											</top>
-											<center>
-												<Label fx:id="labelBlue" text="Blue" BorderPane.alignment="CENTER" />
-											</center>
-											<bottom>
-												<Label fx:id="labelRed" text="Red" BorderPane.alignment="CENTER" />
-											</bottom>
-										</BorderPane>
-										<BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-											<top>
-												<CheckBox fx:id="checkboxGreen" mnemonicParsing="false" onAction="#handleAction" text="Show" BorderPane.alignment="CENTER" />
-											</top>
-											<center>
-												<CheckBox fx:id="checkboxBlue" mnemonicParsing="false" text="Show" BorderPane.alignment="CENTER" />
-											</center>
-											<bottom>
-												<CheckBox fx:id="checkboxRed" mnemonicParsing="false" text="Show" BorderPane.alignment="CENTER" />
-											</bottom>
-										</BorderPane>
-										<BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
-											<center>
-												<TextArea fx:id="outputTextArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-                                       <padding>
-                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                       </padding></TextArea>
-											</center>
-										</BorderPane>
-										<BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-											<center>
-												<Button id="testButton" fx:id="testButton" mnemonicParsing="false" onAction="#handleButtonAction" text="Test" BorderPane.alignment="CENTER" />
-											</center>
-										</BorderPane>
-									</children>
-								</GridPane>
-							</children>
-						</AnchorPane>
-					</content>
-				</Tab>
-			</tabs>
-		</TabPane>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+      				<Tab id="tabSettingsTab" fx:id="tabSettingsTab" text="Settings">
+      					<content>
+      						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+      							<children>
+      								<GridPane layoutX="50.0" layoutY="199.0" prefHeight="559.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      									<columnConstraints>
+      										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      									</columnConstraints>
+      									<rowConstraints>
+      										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      									</rowConstraints>
+      									<children>
+      										<BorderPane prefHeight="200.0" prefWidth="200.0">
+      											<center>
+      												<Label fx:id="labelTransparency" text="Set Transparency" BorderPane.alignment="CENTER" />
+      											</center>
+      										</BorderPane>
+      										<BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+      											<center>
+      												<Slider id="sliderOpac" fx:id="sliderOpac" min="20.0" showTickLabels="true" showTickMarks="true" value="100.0" BorderPane.alignment="CENTER" />
+      											</center>
+      										</BorderPane>
+      										<BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                       <center>
+      												<Label id="SettingsLblRed" fx:id="SettingsLblRed" text="Red" BorderPane.alignment="CENTER" />
+                                       </center>
+      										</BorderPane>
+      										<BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <center>
+      												<CheckBox id="checkboxRed" fx:id="checkboxRed" mnemonicParsing="false" text="Show" BorderPane.alignment="CENTER" />
+                                       </center>
+      										</BorderPane>
+      										<BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+      											<center>
+      												<TextArea fx:id="outputTextArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </TextArea>
+      											</center>
+      										</BorderPane>
+      										<BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+      											<center>
+      												<Button id="testButton" fx:id="testButton" mnemonicParsing="false" onAction="#handleButtonAction" text="Test" BorderPane.alignment="CENTER" />
+      											</center>
+      										</BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <center>
+      												<Label id="SettingsLblGreen" fx:id="SettingsLblGreen" text="Green" BorderPane.alignment="CENTER" />
+                                       </center>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <center>
+      												<CheckBox id="checkboxGreen" fx:id="checkboxGreen" mnemonicParsing="false" text="Show" BorderPane.alignment="CENTER" />
+                                       </center>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                       <center>
+      												<Label id="SettingsLblBlue" fx:id="SettingsLblBlue" text="Blue" BorderPane.alignment="CENTER" />
+                                       </center>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <center>
+      												<CheckBox id="checkboxBlue" fx:id="checkboxBlue" mnemonicParsing="false" text="Show" BorderPane.alignment="CENTER" />
+                                       </center>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                       <center>
+                                          <Label text="E. BattleGround" BorderPane.alignment="CENTER" />
+                                       </center>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <center>
+                                          <CheckBox id="checkboxCenter" fx:id="checkboxCenter" mnemonicParsing="false" text="Show" BorderPane.alignment="CENTER" />
+                                       </center>
+                                    </BorderPane>
+                                    <Label text="Set Update Frequency (secs)" GridPane.rowIndex="1" />
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <center>
+                                          <Label id="lblBarTop" fx:id="lblBarTop" BorderPane.alignment="CENTER" />
+                                       </center>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <center>
+                                          <TextField id="secondsUpdateTB" fx:id="secondsUpdateTB" promptText="Seconds between update" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <right>
+                                          <Button id="updateButton" fx:id="updateButton" mnemonicParsing="false" text="Change" BorderPane.alignment="CENTER" />
+                                       </right>
+                                    </BorderPane>
+      									</children>
+      								</GridPane>
+      							</children>
+      						</AnchorPane>
+      					</content>
+      				</Tab>
+      			</tabs>
+      		</TabPane>
+         </center>
+      </BorderPane>
 	</children>
 </AnchorPane>

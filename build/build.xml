@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<project name="gw2mapoverlayv2" default="do-deploy" basedir="."  xmlns:fx="javafx:com.sun.javafx.tools.ant">
+	<project name="MasterGuildWarsCode" default="do-deploy" basedir="."  xmlns:fx="javafx:com.sun.javafx.tools.ant">
 	<target name="init-fx-tasks">
 		<path id="fxant">
 			<filelist>
@@ -20,14 +20,14 @@
 		<mkdir dir="externalLibs" />
 	
 		<copy todir="externalLibs">
-			<fileset dir="C:\_source\gw2mapoverlayv2">
+			<fileset dir="C:\_source\MasterGuildWarsCode">
 				<filename name="java-json.jar"/>
 			</fileset>
 		</copy>
 	
 		<mkdir dir="project" />
 		<copy todir="project">
-			<fileset dir="C:\_source\gw2mapoverlayv2">
+			<fileset dir="C:\_source\MasterGuildWarsCode">
 				<include name="src/**" />
 			</fileset>
 		</copy>
@@ -86,10 +86,35 @@
 			</fileset>
 		</copy>
 	
-	
+
+		<mkdir dir="dist/resources" />
+		<copy todir="dist/resources" >
+		    <fileset dir="../resources" />
+		</copy>
+
+		<mkdir dir="package" />
+
+		<!-- Icons only for Windows -->
+		<mkdir dir="package/windows" />
+		<copy todir="package/windows">
+		    <fileset dir="..">
+		        <include name="AXI.ico" />
+		        <include name="AXI.bmp" />
+		    </fileset>
+		</copy>
+
+		<!-- Icons only for MacOS -->
+		<mkdir dir="package/macosx" />
+		<copy todir="package/macosx">
+		    <fileset dir="..">
+		        <include name="AXI.icns" />
+		    </fileset>
+		</copy> 
+		
 		<fx:resources id="appRes">
-			<fx:fileset dir="dist" includes="gw2mapoverlayv2.jar"/>
+			<fx:fileset dir="dist" includes="MasterGuildWarsCode.jar"/>
 			<fx:fileset dir="dist" includes="libs/*"/>
+			<fx:fileset dir="dist" includes="resources/**"/>
 		</fx:resources>
 	
 		<fx:application id="fxApplication"
@@ -101,7 +126,7 @@
 	
 	
 	
-		<fx:jar destfile="dist/gw2mapoverlayv2.jar">
+		<fx:jar destfile="dist/MasterGuildWarsCode.jar">
 			<fx:application refid="fxApplication"/>
 			<fileset dir="build/classes">
 			</fileset>
@@ -110,12 +135,29 @@
 			<manifest>
 				<attribute name="Implementation-Vendor" value="AXI"/>
 				<attribute name="Implementation-Title" value="Guild Wars 2 Map Overlay"/>
-				<attribute name="Implementation-Version" value=""/>
+				<attribute name="Implementation-Version" value="1.0"/>
 				<attribute name="JavaFX-Feature-Proxy" value="None"/>
 			</manifest>
 		</fx:jar>
 	
 	
+		<mkdir dir="deploy" />
+		<!-- Need to use ${basedir} because somehow the ant task is calculating the directory differently -->
+		<fx:deploy
+			embedJNLP="false"
+			extension="false"
+			includeDT="false"
+			offlineAllowed="true"
+			outdir="${basedir}/deploy"
+			outfile="MasterGuildWarsCode" nativeBundles="exe"
+			updatemode="background" >
+	
+			<fx:platform basedir="${java.home}"/>
+			<fx:info title="MasterGuildWarsCode" vendor="AXI"/>
+	
+			<fx:application refId="fxApplication"/>
+			<fx:resources refid="appRes"/>
+		</fx:deploy>
 	
 	
 	</target>
